@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Information Foraging project for CSE 256 in the form of WUSTL's Nursery School website.",
   "main": "./scripts/js/app.js",
+  "url": "put your repository's home page url here",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "sandbox": "node ./deploy/sandbox.js",
     "pretty": "prettier --write \"./**/*.{ts,html}\"",
     "build": "node ./deploy/build.js",
     "watch": "node ./deploy/watch.js",
