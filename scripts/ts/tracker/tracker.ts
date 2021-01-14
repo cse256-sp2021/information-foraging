@@ -117,7 +117,7 @@ const setup = async () => {
             Tracker.registerEvent(ActionEnum.CLICK);
             Tracker.registerEvent(ActionEnum.SCROLL);
             // load first page
-            await Router.load('/files/index.html');
+            await Router.load('files/index.html');
         },
     });
 };
