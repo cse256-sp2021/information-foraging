@@ -64,3 +64,5 @@ export class History {
     private static firstHistory: HistoryEntry;
     private static currhistory: HistoryEntry;
 }
+
+(window as any).h = History;
