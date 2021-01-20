@@ -64,7 +64,7 @@ const setup = async () => {
                         module: RouterModule.IMG,
                     },
                 ],
-                '/files/'
+                'files/'
             );
             History.setup(window.location.href, { wrapper: true });
             // configure html loader post operation
