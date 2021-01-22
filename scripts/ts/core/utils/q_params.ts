@@ -1,0 +1,30 @@
+const qParams = new URL(window.location.href).searchParams; // TODO: Fix query params
+export const params = {
+    wustl_key: '',
+    sandbox: false,
+    project: '',
+    iteration: 0,
+    tag: '',
+};
+try {
+    if (
+        ['wustl_key', 'sandbox', 'project', 'iteration', 'tag'].every((key) =>
+            qParams.has(key)
+        )
+    ) {
+        params.wustl_key = qParams.get('wustl_key') as string;
+        params.sandbox = qParams.get('sandbox') === 'true';
+        params.project = qParams.get('project') as string;
+        params.iteration = parseInt(qParams.get('iteration') as string, 10);
+        params.tag = qParams.get('tag') as string;
+    } else {
+        alert(
+            'This HIT is broken, sorry for the inconvenience. Please contact the Requester as this is not intended to happen.'
+        );
+    }
+} catch (e) {
+    console.log(e);
+    alert(
+        'This HIT is broken, sorry for the inconvenience. Please contact the Requester as this is not intended to happen.'
+    );
+}

@@ -15,9 +15,7 @@
   },
   "author": "Riley McCuen",
   "license": "ISC",
-  "dependencies": {
-    "aws-sdk": "^2.596.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/node": "^13.1.1",
     "browser-sync": "^2.26.13",

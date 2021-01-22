@@ -4,7 +4,6 @@ import { Elements } from '../dom/elements';
 import { TrackerElements } from '../dom/tracker_elems';
 import { DebugLevelEnum, log, setDebugLevel } from '../utils/console_wrapper';
 import { Scenario } from '../utils/scenarios';
-import { MturkClient } from './../aws/mturk';
 import { data } from './../data-log/data';
 import { AllowSubmission, SubmitForm } from './../dom/submit_form';
 
@@ -47,7 +46,6 @@ export class Tracker {
         // configure tracker specific elements
         TrackerElements.setupTrackerElements();
         SubmitForm.setup(config.allowSubmission);
-        MturkClient.init(config.bucketName, config.keyPrefix);
         data.data.task = Elements.htmlLoc.dataset.task;
         config.setup();
     }
