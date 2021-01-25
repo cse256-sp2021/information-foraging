@@ -61,7 +61,7 @@ export class SubmitForm {
                         assignmentID: data.urlData.assignmentID,
                         hitID: data.urlData.hitID,
                         workerID: data.urlData.workerID,
-                        log: data.serialize,
+                        log: data.serialize(),
                     }),
                 }); // TODO: verify this actually works
                 console.log(resp.status);
