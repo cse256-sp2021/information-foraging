@@ -1,4 +1,4 @@
-const qParams = new URL(window.location.href).searchParams; // TODO: Fix query params
+const qParams = new URL(window.location.href).searchParams;
 export const params = {
     wustl_key: '',
     sandbox: false,
@@ -7,6 +7,7 @@ export const params = {
     tag: '',
 };
 try {
+    qParams.forEach(console.log);
     if (
         ['wustl_key', 'sandbox', 'project', 'iteration', 'tag'].every((key) =>
             qParams.has(key)
