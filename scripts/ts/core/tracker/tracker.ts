@@ -21,7 +21,7 @@ export class Tracker {
     public static lastPos = { x: 0, y: 0, time: 0 };
 
     public static loadScenario(scen: Scenario) {
-        let sub = scen.scenario;
+        let sub = scen.context;
         if (sub.length > 50) {
             sub = sub.substring(0, 50);
             const inds = [
@@ -36,7 +36,7 @@ export class Tracker {
         }
 
         Elements.mtTopBannerText.innerText = sub;
-        Elements.mtScenarioContext.innerText = scen.scenario;
+        Elements.mtScenarioContext.innerText = scen.context;
         Elements.mtScenarioQuestion.innerText = scen.question;
         Elements.htmlLoc.dataset.task = scen.tag;
     }
