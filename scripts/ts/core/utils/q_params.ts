@@ -9,9 +9,10 @@ export const params = {
 try {
     qParams.forEach(console.log);
     if (
-        ['wustl_key', 'sandbox', 'project', 'iteration', 'tag'].every((key) =>
-            qParams.has(key)
-        )
+        ['wustl_key', 'sandbox', 'project', 'iteration', 'tag'].every((key) => {
+            console.log('key: ' + qParams.has(key));
+            return qParams.has(key);
+        })
     ) {
         params.wustl_key = qParams.get('wustl_key') as string;
         params.sandbox = qParams.get('sandbox') === 'true';
@@ -21,7 +22,7 @@ try {
     } else {
         console.log('missing query params');
         alert(
-            'This HIT is broken, sorry for the inconvenience. Please contact the Requester as this is not intended to happen.'
+            'This HIT is missing neccessary metadata, sorry for the inconvenience. Please contact the Requester as this is not intended to happen.'
         );
     }
 } catch (e) {
