@@ -46,15 +46,6 @@ export class SubmitForm {
                 (Elements.submitForm as HTMLFormElement).action = data.urlData
                     .submitTo as string;
                 allowSubmission.preSubmit();
-                let hitID = data.urlData.hitID;
-                if (hitID === null) {
-                    hitID = 'hitid' + Math.round(Math.random() * 100000);
-                }
-                let assignmnetID = data.urlData.assignmentID;
-                if (assignmnetID === null) {
-                    assignmnetID =
-                        'assignmnetid' + Math.round(Math.random() * 100000);
-                }
                 const resp = await fetch(gate, {
                     method: 'POST',
                     headers: {
@@ -62,16 +53,19 @@ export class SubmitForm {
                         'x-api-key': k,
                     },
                     body: JSON.stringify({
-                        body: JSON.stringify({
-                            sandbox: params.sandbox,
-                            wustl_key: params.wustl_key,
-                            project: params.project,
-                            iteration: params.iteration,
-                            tag: params.tag,
-                            log: data,
-                        }),
+                        sandbox: params.sandbox,
+                        wustl_key: params.wustl_key,
+                        project: params.project,
+                        iteration: params.iteration,
+                        tag: params.tag,
+                        assignmentID: data.urlData.assignmentID,
+                        hitID: data.urlData.hitID,
+                        workerID: data.urlData.workerID,
+                        log: data.serialize,
                     }),
                 }); // TODO: verify this actually works
+                console.log(resp.status);
+                console.log(await resp.json());
                 if (resp.status !== 200) {
                     alert(
                         'You made a bad request with your submission. The server thinks that you made this error: ' +

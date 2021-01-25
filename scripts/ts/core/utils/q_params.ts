@@ -18,6 +18,7 @@ try {
         params.iteration = parseInt(qParams.get('iteration') as string, 10);
         params.tag = qParams.get('tag') as string;
     } else {
+        console.log('missing query params');
         alert(
             'This HIT is broken, sorry for the inconvenience. Please contact the Requester as this is not intended to happen.'
         );
