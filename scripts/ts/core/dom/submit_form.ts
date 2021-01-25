@@ -34,7 +34,8 @@ export class SubmitForm {
                 data.urlData.assignmentID = qp.get('assignmentId');
                 data.urlData.hitID = qp.get('hitId');
                 data.urlData.workerID = qp.get('workerId');
-                data.urlData.submitTo = qp.get('turkSubmitTo');
+                data.urlData.submitTo =
+                    qp.get('turkSubmitTo') + 'mturk/externalSubmit';
                 if (data.urlData.assignmentID !== null) {
                     (D.id('assignment-id') as HTMLInputElement).value =
                         data.urlData.assignmentID;
