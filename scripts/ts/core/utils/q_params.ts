@@ -27,6 +27,7 @@ try {
     }
 } catch (e) {
     console.log(e);
+    alert(e);
     alert(
         'This HIT is broken, sorry for the inconvenience. Please contact the Requester as this is not intended to happen.'
     );
