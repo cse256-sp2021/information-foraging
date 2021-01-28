@@ -1,6 +1,6 @@
 [
     {
-        "context": " You are a parent considering sending your child to Washington University Nursery School. You’ve learned that the curriculum is play-based and you want to know how learning is incorporated into a play-based context. You have some ideas about how language learning might happen, but are less sure about math. ",
+        "context": "You are a parent considering sending your child to Washington University Nursery School. You’ve learned that the curriculum is play-based and you want to know how learning is incorporated into a play-based context. You have some ideas about how language learning might happen, but are less sure about math.",
         "question": "Find some examples of how math learning is incorporated at Washington University Nursery School.",
         "tag": "math"
     },
@@ -45,13 +45,28 @@
         "tag": "deposit"
     },
     {
+        "context": "You are moving to St. Louis from Beijing and looking for a Pre-K program for your daughter, age 5. She is very close to her friends and you are worried that the move might be hard on her. She may need some extra support from her new teachers learning English, adapting to American culture, and making new friends.",
+        "question": "How does the Washington University Nursery School staff approach providing extra help to students who need it?",
+        "tag": "help"
+    },
+    {
         "context": "You are looking at Nursery Schools for your soon to be 3 year old. He has never been in school or daycare before and you are somewhat worried about the transition. You'd like to ensure that you'll be able to have strong communicationat his new school.",
         "question": "How does the Washington University Nursery School handle communicating with parents?",
         "tag": "communication"
     },
     {
-        "context": "You are moving to St. Louis from Beijing and looking for a Pre-K program for your daughter, age 5. She is very close to her friends and you are worried that the move might be hard on her. She may need some extra support from her new teachers learning English, adapting to American culture, and making new friends.",
-        "question": "How does the Washington University Nursery School staff approach providing extra help to students who need it?",
-        "tag": "help"
+        "context": "It’s mid-December and your son, age 4, came home all excited about science class. They learned a new word, but he can’t actually remember the word they learned about.",
+        "question": "What was the topic of his recent science class?",
+        "tag": "science"
+    },
+    {
+        "context": "You are selecting a pre-school, but want to be sure that your daughter will be ready for kindergarten when it’s time.",
+        "question": "How does the nursery school assess children’s knowledge, support their growth, and share the results with parents?",
+        "tag": "parent_teacher_conference"
+    },
+    {
+        "context": "You have recently accepted a position for your child for the coming school year at the Washington University Nursery School. Up to this point, your child has been at home and you are somewhat worried about the transition.",
+        "question": "How does the nursery school support kids’ transitions into school?",
+        "tag": "orientation"
     }
 ]
