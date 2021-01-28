@@ -34,7 +34,8 @@ export class Tracker {
             const ind = Math.max(...inds);
             sub = sub.substring(0, ind) + '...';
         }
-
+        console.log(scen);
+        console.log('loaded scen');
         Elements.mtTopBannerText.innerText = sub;
         Elements.mtScenarioContext.innerText = scen.context;
         Elements.mtScenarioQuestion.innerText = scen.question;
